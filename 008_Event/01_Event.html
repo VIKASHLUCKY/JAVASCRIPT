@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        img {
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <ul id="images">
+            <li><img src="./images/one.jpg" alt="No Access Image Path" id="one"></li>
+            <li><img src="./images/two.jpg" alt="No Access Image Path" id="two"></li>
+            <li><img src="./images/three.jpg" alt="No Access Image Path" id="three"></li>
+            <li><img src="./images/four.jpeg" alt="No Access Image Path" id="four"></li>
+
+        </ul>
+    </div>
+</body>
+
+
+
+<!-- Start JavaScript -->
+<script>
+
+    // onclick
+
+    // document.getElementById('one').onclick = function () {
+    //     alert("First Image Clicked !")
+    // }
+
+    // addEventListener()
+    // attacheEvent()
+    //jQuery - on
+
+
+    // document.getElementById('one').addEventListener('click', function () {
+    //     alert('First Image Clicked ')
+    // });
+
+    // document.getElementById('one').addEventListener('click', function (e) {
+    //     console.log(e)
+    // }, false)
+
+    //type , timestamp , defaultPrevented
+    // target , toElement , srcElement , currentTarget , 
+    //clientX , clientY , ScreenX , ScreenY
+    // altKey , ctrKey , shiftKey , KeyCode
+
+    // false  buttom to top   & true  :- capturing top to bottom
+
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     console.log("Clicked inside the ul")
+    // }, true);
+
+    // document.getElementById('two').addEventListener('click', function (e) {
+    //     console.log("two images press");
+    //     e.stopPropagation()     // isase ul not clicked only second images clicked
+    // }, true);
+
+
+    // REMOVE IMAGES 
+    // document.querySelector('#images').addEventListener('click', function (e) {
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     // removeIt.remove()
+    //     removeIt.parentNode.removeChild(removeIt)
+    // })
+
+    // OR
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+    })
+</script>
+
+</html>

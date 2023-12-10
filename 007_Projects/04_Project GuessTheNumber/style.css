@@ -1,0 +1,47 @@
+body {
+    background-color: #212121;
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    height: 95vh;
+    width: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: 2px solid violet;
+    margin: auto;
+}
+
+
+
+#guessField {
+    width: 50vh;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+#subt {
+    width: 53vh;
+    margin-top: 10px;
+
+    padding: 10px;
+    background-color: green;
+    color: #fff;
+
+
+
+}
+
+label {
+    font-size: 55px;
+    color: chocolate;
+
+}
+
+p {
+    font-size: 20px;
+}

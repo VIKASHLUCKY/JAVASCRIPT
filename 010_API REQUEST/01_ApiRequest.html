@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REQUEST</title>
+
+    <style>
+        #followers {
+            height: 250px;
+            width: 250px;
+            border: 2px solid rebeccapurple;
+            color: white;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121;">
+
+    <div id="followers">
+    </div>
+    <h3 id="twiter"></h3>
+</body>
+
+<!-- script start -->
+<script>
+    // const requestUrl = 'https://randomuser.me/api/'
+
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data)
+            // console.log(data.followers);
+            document.getElementById('followers').innerHTML = (` History Of hiteshchoudhary  <hr> 
+            Followers :-  ${data.followers} <br> 
+            Twiter Name : - ${data.twitter_username} <br>
+             Location :- ${data.location}<br>
+             Channel Created :- ${data.created_at}<hr>
+             Boi Data :- ${data.bio}
+             `);
+            // document.getElementsById('twiter').innerHTML = data.twitter_username;
+        }
+    }
+    xhr.send()
+</script>
+
+<!-- script End -->
+
+</html>

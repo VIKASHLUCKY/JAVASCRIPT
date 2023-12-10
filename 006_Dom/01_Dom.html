@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>DOM learning</title>
+
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+
+    <div>
+        <h1 id="title" class="heading">DOM learning on jaunpur coder <span style="display: none;">Hello Lucky G</span>
+        </h1>
+        <p id="para">Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <li class="list-item">ONE</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
+
+
+<!-- All DOM - Document Object Model  notes
+
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM learning on jaunpur coder​</h1>​
+document.getElementById('title').innerHTML="<h1>Hello Sir </h1>";
+'<h1>Hello Sir </h1>'
+document.getElementById('title').id
+'title'
+document.getElementById('title').class
+undefined
+document.getElementById('title').className
+'heading'
+document.getElementById('title').getAttribute('id')
+'title'
+document.getElementById('title').getAttribute('class')
+'heading'
+document.getElementById('title').getAttribute('class' , 'text heading')
+'heading'
+document.getElementById('title').setAttribute('class' , 'text heading')
+
+style in console puting======
+
+title
+<h1 id=​"title" class=​"heading">​DOM learning on jaunpur coder​</h1>​
+title.style.backgroundColor = 'red'
+
+title.style.padding = "50px"
+title.style.borderRadius = "50px"
+
+
+title
+<h1 id=​"title" class=​"heading">​DOM learning on jaunpur coder​</h1>​
+title.textContent
+'DOM learning on jaunpur coder'
+title.innerText
+'DOM learning on jaunpur coder'
+
+title.textContent vs  title.innerText
+
+title.innerHTML
+'DOM learning on jaunpur coder <span style="display: none;">Hello Lucky G</span>\n 
+title
+<h1 id=​"title" class=​"heading">​"DOM learning on jaunpur coder "<span style=​"display:​ none;​">​Hello Lucky G​</span>​</h1>​
+title.innerText
+'DOM learning on jaunpur coder'
+
+title.textContent
+'DOM learning on jaunpur coder Hello Lucky G\n 
+
+
+================ul==========================
+
+document.querySelector('ul')
+
+const templilist = document.querySelectorAll('li')
+undefined
+templilist[0].style.color = 'red'
+'red'
+templilist[2].style.color = 'green'
+'green'
+templilist[1].style.color = 'pink'
+'pink'
+templilist[1].style.backgroundColor = 'white'
+'white'
+templilist[1].style.borderRadius = '50px'
+'50px'
+templilist[1].innerHTML = "Hello"
+'Hello'
+
+========= forEach ===============
+
+const templist = document.querySelectorAll('ul')
+undefined
+templist
+NodeList [ul]0: ulaccessKey: ""ariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "http://127.0.0.1:5500/006_Dom/01_Dom.html"childElementCount: 3childNodes: NodeList(7) [text, li, text, li, text, li, text]children: HTMLCollection(3) [li, li, li]classList: DOMTokenList [value: '']className: ""clientHeight: 54clientLeft: 0clientTop: 0clientWidth: 795compact: falsecontentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: lihidden: falseid: ""inert: falseinnerHTML: "\n            <li>ONE</li>\n            <li>Two</li>\n            <li>Three</li>\n        "innerText: "ONE\nTwo\nThree"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: lilocalName: "ul"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: nullnextSibling: textnodeName: "UL"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 54offsetLeft: 8offsetParent: body.bg-blackoffsetTop: 114offsetWidth: 795onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforetoggle: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonscrollend: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<ul>\n            <li>ONE</li>\n            <li>Two</li>\n            <li>Three</li>\n        </ul>"outerText: "ONE\nTwo\nThree"ownerDocument: documentparentElement: divparentNode: divpart: DOMTokenList [value: '']popover: nullprefix: nullpreviousElementSibling: p#parapreviousSibling: textrole: nullscrollHeight: 54scrollLeft: 0scrollTop: 0scrollWidth: 795shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "UL"textContent: "\n            ONE\n            Two\n            Three\n        "title: ""translate: truetype: ""virtualKeyboardPolicy: ""[[Prototype]]: HTMLUListElement(...)length: 1[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+const templist = document.querySelectorAll('li')
+undefined
+templist
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+templist.forEach(function(l){
+    l.style.backgroundColor='green'
+})
+undefined
+
+
+templist.forEach(function(l){
+    l.style.borderRadius='50px'
+})
+-->

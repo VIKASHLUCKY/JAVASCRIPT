@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body style="background-color: #212121; color:#fff;">
+
+</body>
+
+<!-- Start JavaScript -->
+
+<script>
+    const createTag = document.createElement('h1')
+    console.log(createTag);
+    createTag.className = "main"
+    createTag.id = "head"
+
+    // createTag.id = Math.random()   // random numbers
+    createTag.id = Math.random()   // random numbers
+    createTag.id = Math.round(Math.random() * 10 + 1)   // random numbers
+
+    createTag.setAttribute("title", "generated title")
+
+    // createTag.innerHTML = "Hello Sir"
+
+    // or
+
+    const addText = document.createTextNode("Jaunpur Coder")
+    createTag.appendChild(addText)
+
+    // Body In Show H1 
+
+    document.body.appendChild(createTag)
+</script>
+
+</html>
